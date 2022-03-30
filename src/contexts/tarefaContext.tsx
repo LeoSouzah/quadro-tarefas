@@ -44,19 +44,8 @@ export function TarefasProvider(props: PropsTarefasProvider) {
         editar: false, tarefa: null
     });
   
-
-    // useEffect(() => {
-
-    //     axios.get('/api/tarefas').then((res) => {
-    //         setTarefas(res.data)
-    //         console.log(res.data);
-            
-    //     })
-
-    // }, [])
-
-//#################### CREATE ##########################################################    
-
+ 
+    
     async function criarTarefas(data: PropsTarefasInput) {
         await axios.post('/api/tarefas', data)
             .then((res) => {

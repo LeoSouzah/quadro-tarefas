@@ -148,7 +148,7 @@ export function NovoModal(props: NovoModalProps) {
                             buttonExcluir();
                         }}
                     >
-                        excluir
+                        Excluir
                     </button>
 
                     : null
