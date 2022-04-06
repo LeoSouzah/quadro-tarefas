@@ -8,6 +8,11 @@ export const FormContainer = styled.form`
         margin-bottom: 2rem;
     }
 
+    p {
+        color: grey;
+        margin-bottom: 5px;
+    }
+
     input {
         width: 96%;
         padding: 10px;
@@ -56,9 +61,25 @@ export const FormContainer = styled.form`
             filter: brightness(0.8);
         }
         
+
     }
     .delete{
         background: red;
         
+    }
+
+    .selecao {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid #d7d7d7;
+
+        background: #e7e9ee;
+
+        font-size: 1rem;
+        color: var(--blue);
+
+
+        margin-bottom: 1rem;
     }
 `;

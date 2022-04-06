@@ -22,6 +22,7 @@ export function NovoModal(props: NovoModalProps) {
     const [titulo, setTitulo] = useState("");
     const [descricao, setDescricao] = useState("");
     const [show, setShow] = useState<boolean>(false);
+    const [position, setPosition] = useState("");
 
     useEffect(() => {
         if (editarTarefa.editar) {
@@ -84,7 +85,8 @@ export function NovoModal(props: NovoModalProps) {
         } else {
             criarTarefas({
                 titulo,
-                descricao
+                descricao, 
+                position
             })
         }
 
@@ -124,10 +126,19 @@ export function NovoModal(props: NovoModalProps) {
             <FormContainer onSubmit={onSubmitModal} >
                 <h2>Cadastrar Tarefa</h2>
 
+                <select className='selecao' name='select' onChange={(event) => setPosition(event.target.value)}>
+                    <option>Selecione um Quadro: </option>
+                    <option value="1">Quadro 1</option>
+                    <option value="2">Quadro 2</option>
+                    <option value="3">Quadro 3</option>
+
+                    </select>
+
                 <input
                     placeholder='Titulo'
                     value={titulo}
                     onChange={(event) => setTitulo(event.target.value)}
+                    
                 />
 
                 <textarea

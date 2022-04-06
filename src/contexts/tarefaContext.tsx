@@ -22,7 +22,8 @@ export const TarefaContext = createContext({} as interfaceTarefaContext);
 type InterfaceTarefas = {
     id: string,
     titulo: string,
-    descricao: string
+    descricao: string, 
+    position: string
 }
 
 type PropsTarefasInput = Omit<InterfaceTarefas, 'id'>
