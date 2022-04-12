@@ -8,11 +8,18 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
 
+    @media (max-width:900px ){
+        display: flex;
+        flex-wrap:wrap;
+    }
+    
+
     ul {
         width: 30rem;
         border-radius: 0.25rem;
         margin: 5px;
         border: 2px solid #d7d7d7;
+        height: 100%;
 
         background-color: #EBECF0;
 
@@ -32,6 +39,9 @@ export const Container = styled.div`
 
             display: flex;
             justify-content: space-between;
+            
+            
+            
 
             div {
                     display: flex;
