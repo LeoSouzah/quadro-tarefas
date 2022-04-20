@@ -5,6 +5,7 @@ import { NovoModal } from './components/Modal'
 import Modal from 'react-modal';
 import { ListagemTarefas } from './components/ListagemTarefas';
 import { TarefaContext, TarefasProvider } from './contexts/tarefaContext';
+import { Loading } from './styleLoading';
 
 Modal.setAppElement('#root');
 function App() {
@@ -23,6 +24,7 @@ function App() {
     return (
         <TarefasProvider>
             <div>
+                <Loading />
                 <GlobalStyle />
 
                 <Header abrirModal={abrirModal} />
