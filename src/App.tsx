@@ -5,7 +5,7 @@ import { NovoModal } from './components/Modal'
 import Modal from 'react-modal';
 import { ListagemTarefas } from './components/ListagemTarefas';
 import { TarefaContext, TarefasProvider } from './contexts/tarefaContext';
-import { Loading } from './styleLoading';
+import { LoadingEffect } from './components/Loading';
 
 Modal.setAppElement('#root');
 function App() {
@@ -24,7 +24,8 @@ function App() {
     return (
         <TarefasProvider>
             <div>
-                <Loading />
+                <LoadingEffect />
+
                 <GlobalStyle />
 
                 <Header abrirModal={abrirModal} />
